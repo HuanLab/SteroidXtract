@@ -4,5 +4,7 @@ SteroidXtract is a deep-learning based bioinformatics tool for steroid MS2 extra
 
 SteroidXtract is written in Python and is publicly available for non-commercial use.
 
+For detailed instructions, please refer to the usr manual of SteroidXtract.
+
 HuanLab
-Sep 29, 2020
+Oct 2, 2020
