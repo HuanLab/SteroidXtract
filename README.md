@@ -6,5 +6,9 @@ SteroidXtract is written in Python and is publicly available for non-commercial 
 
 For detailed instructions, please refer to the user manual of SteroidXtract.
 
+# Download SteroidXtract Model
+
+To download the SteroidXtract CNN model, please go to the Supporting Information (zip file) of our paper. 
+
 HuanLab
-Oct 2, 2020
+Feb 5, 2021
