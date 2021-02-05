@@ -16,7 +16,6 @@ from keras.models import Sequential, model_from_json
 from keras.layers import Dense, Conv1D, MaxPooling1D, Flatten, Dropout
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split, StratifiedKFold
-from sklearn import svm
 from sklearn.ensemble import RandomForestClassifier
 
 def dataset_passing_in(path):
@@ -76,37 +75,6 @@ def CNN_crossvalidation(X_train, y_train, X_test, y_test, num_epochs=10, unitNo 
 
     return result_list
     
-def SVM_crossvalidation(X_train, y_train, X_test, y_test, CNo = 1.0):
-    y_b_train = y_train.copy()
-    y_b_train = np.where(y_train == 'steroid', 1, y_b_train)
-    y_b_train = np.where(y_train == 'nonsteroid', 0, y_b_train)
-    count = (y_train == 'steroid').sum()
-    y_b_train = y_b_train.astype('int')
-    y_b_train = y_b_train.reshape((y_b_train.shape[0],))
-
-    class_weights = {0:(X_train.shape[0]/(X_train.shape[0] - count))/2.0, 1:(X_train.shape[0]/ count)/2.0}
-
-    clf = svm.SVC(kernel='rbf',class_weight=class_weights, C = CNo) # Radial basis function kernel, RBF kernel
-    clf.fit(X_train, y_b_train)
-    
-    y_b_test = y_test.copy()
-    y_b_test = np.where(y_test == 'steroid', 1, y_b_test)
-    y_b_test = np.where(y_test == 'nonsteroid', 0, y_b_test)
-    y_b_test = y_b_test.astype('int')
-
-    y_pred = clf.predict(X_test)
-    cm = confusion_matrix(y_b_test, y_pred)
-    tn = cm[0,0]
-    tp = cm[1,1]
-    fn = cm[1,0]
-    fp = cm[0,1]
-    recall = tp / (tp + fn)
-    precision = tp / (tp + fp)
-    f1 = 2*recall*precision / (recall + precision)
-    mcc = (tp*tn - fp*fn) / math.sqrt((tp+fp)*(tp+fn)*(tn+fp)*(tn+fn))
-    result_list = [tp, fp, tn, fn, recall, precision, f1, mcc]
-
-    return result_list
 
 def RF_crossvalidation(X_train, y_train, X_test, y_test, treeNo = 100):
     y_b_train = y_train.copy()
