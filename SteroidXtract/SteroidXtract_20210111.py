@@ -4,9 +4,9 @@
 # Copyright @ The University of British Columbia
 #########################################
 # Working directories
-input_dir = 'E:/SteroidXtract_2020/20200902-steroidstd_serial_dilution/mzXML files' # input data path for SteroidXtract
-output_dir = 'E:/SteroidXtract_2020/20200902-steroidstd_serial_dilution/prediction_20210127' # output data path for SteroidXtract
-model_dir = 'E:/SteroidXtract_2020/Final codes & file templates/SteroidXtract_20210127' # data path for SteroidXtract models
+input_dir = 'E:/SteroidXtract_2020'  # input data path for SteroidXtract
+output_dir = 'E:/SteroidXtract_2020' # output data path for SteroidXtract
+model_dir = 'E:/SteroidXtract_2020'  # data path for SteroidXtract models
 
 # Parameter setting
 ms1_tol = 0.005  # MS1 mass tolerance
