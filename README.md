@@ -12,6 +12,11 @@ For detailed instructions, please refer to the user manual of SteroidXtract.
 
 To download the SteroidXtract CNN model, please go to the Supporting Information (zip file) of our paper. 
 
+# Citation
+
+S. Xing, Y. Jiao, M. Salehzadeh, K. Soma, T. Huan, ‘SteroidXtract: Deep Learning-Based Pattern Recognition Enables Comprehensive and Rapid Extraction of Steroid-Like Metabolic Features for Automated Biology-Driven Metabolomics’, Analytical Chemistry, accepted, 2021.
+
+
 HuanLab
 
 Feb 5, 2021
