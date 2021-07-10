@@ -11,6 +11,7 @@ For detailed instructions, please refer to the user manual of SteroidXtract.
 # Download SteroidXtract Model
 
 To download the SteroidXtract CNN model, please go to the Supporting Information (zip file) of our paper. 
+https://pubs.acs.org/doi/abs/10.1021/acs.analchem.0c04834
 
 # Citation
 
